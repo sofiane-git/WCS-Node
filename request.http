@@ -1,0 +1,26 @@
+# POST http://localhost:3000/api/wilder HTTP/1.1
+# content-type: application/json
+
+# {
+#     "name": "sofiane",
+#     "city": "Parisisis",
+#     "skills": [
+#         { "title": "express", "vote": 5 },
+#         { "title": "mongo", "vote": 5 }
+#     ]
+# }
+
+
+GET http://localhost:3000/api/wilder HTTP/1.1
+
+
+# DELETE http://localhost:3000/api/wilder HTTP/1.1
+# content-type: application/json
+
+# {
+#     "_id": "6142038eef50afe1f7c6c0af"
+# }
+
+
+
+
