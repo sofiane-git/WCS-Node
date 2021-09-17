@@ -37,9 +37,10 @@
 // //Start Server
 // app.listen(3000, () => console.log("Server started on 3000"))
 
-const express = require('express');
-const mongoose = require('mongoose');
-const app = express();
+const express = require('express')
+const mongoose = require('mongoose')
+const app = express()
+const cors = require('cors')
 
 //Database
 mongoose
@@ -50,8 +51,17 @@ mongoose
     .catch((err) => console.log(err));
 
 //Middleware
+app.use(cors())
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
+// app.use((req, res) => {
+//     // console.log(err.stack)
+//     res.status(404).send(`<h1 style="display: flex; align-items: center; justify-content: center; height: 100vh;">La route "${req.url}" est introuvable !</h1>`)
+// })
+// app.use((err, req, res, next) => {
+//     console.log(err.stack)
+//     res.status(500).send('Something broke')
+// })
 
 //Controllers
 const WilderController = require('./controllers/wilders')
@@ -61,7 +71,7 @@ app.get("/", (req, res) => {
     res.send("Hello World");
 })
 app.post("/api/wilder", WilderController.create)
-app.post("/api/wilder", WilderController.update)
+app.put("/api/wilder", WilderController.update)
 app.get("/api/wilder", WilderController.retrieve)
 app.delete("/api/wilder", WilderController.delete)
 

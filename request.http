@@ -1,25 +1,43 @@
-# POST http://localhost:3000/api/wilder HTTP/1.1
-# content-type: application/json
+### Create
+POST http://localhost:3000/api/wilder HTTP/1.1
+content-type: application/json
 
-# {
-#     "name": "sofiane",
-#     "city": "Parisisis",
-#     "skills": [
-#         { "title": "express", "vote": 5 },
-#         { "title": "mongo", "vote": 5 }
-#     ]
-# }
+{
+    "name": "sofiane",
+    "city": "allemagn",
+    "skills": [
+        { "title": "express", "vote": 5 },
+        { "title": "mongo", "vote": 5 }
+    ]
+}
 
 
+### Read
 GET http://localhost:3000/api/wilder HTTP/1.1
 
 
-# DELETE http://localhost:3000/api/wilder HTTP/1.1
-# content-type: application/json
+### Update
+PUT http://localhost:3000/api/wilder HTTP/1.1
+content-type: application/json
 
-# {
-#     "_id": "6142038eef50afe1f7c6c0af"
-# }
+{
+    "_id": "6142fea70832e911cc99f973",
+    "name": "wcs",
+    "city": "allem",
+    "skills": [
+        { "title": "express", "vote": 5 },
+        { "title": "mongo", "vote": 5 }
+    ]
+}
+
+
+### DELETE
+DELETE http://localhost:3000/api/wilder HTTP/1.1
+content-type: application/json
+
+{
+    "_id": "6141fca61d708a70b8100e51"
+}
 
 
 
